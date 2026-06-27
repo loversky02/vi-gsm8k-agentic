@@ -1,0 +1,7 @@
+# Cài trên H100 (giai đoạn 2 training)
+torch>=2.4
+transformers>=4.46
+peft>=0.13
+trl>=0.12
+accelerate>=1.0
+datasets>=3.0

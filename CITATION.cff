@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Vietnamese GSM8K — Agentic Self-Instruct"
+message: "If you use this dataset or code, please cite this repository and the Autodata paper."
+type: dataset
+authors:
+  - name: vuongtsc
+date-released: 2026-06-27
+license: MIT
+url: "https://github.com/loversky02/vi-gsm8k-agentic"
+repository-artifact: "https://huggingface.co/datasets/vuongtsc/vi-gsm8k-agentic"
+keywords:
+  - vietnamese
+  - math
+  - instruction-tuning
+  - synthetic-data
+  - agentic-self-instruct
+references:
+  - type: article
+    title: "Autodata: An agentic data scientist to create high quality synthetic data"
+    authors:
+      - name: "Kulikov, Whitehouse, Weston, et al."
+    year: 2026
+    notes: "arXiv:2606.25996"
