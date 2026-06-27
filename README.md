@@ -37,7 +37,7 @@ A deterministic **code orchestrator** coordinates 4 LLM subagents per sample:
 | Verifier | code-exec + Claude Opus | numeric answer match (primary) + reasoning judge |
 
 **GATE** keeps a sample iff `strong PASS ∧ weak FAIL ∧ verify PASS ∧ not duplicate`.
-Diagram: [10-pipeline-inner-loop.md](10-pipeline-inner-loop.md).
+Diagram: [10-pipeline-inner-loop.md](docs/10-pipeline-inner-loop.md).
 
 ## 🚀 Reproduce
 

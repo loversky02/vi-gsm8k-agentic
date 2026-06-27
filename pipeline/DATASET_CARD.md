@@ -27,6 +27,8 @@ Most Vietnamese math instruction data is machine-translated from English. This s
 *natively* in Vietnamese and quality-controlled by an agentic verification loop, every answer checked
 by code execution.
 
+**Code & full method:** https://github.com/loversky02/vi-gsm8k-agentic
+
 ## How it was built
 
 A deterministic code orchestrator coordinates four LLM subagents per item:

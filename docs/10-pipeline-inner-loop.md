@@ -1,6 +1,6 @@
 # 10 — Sơ đồ pipeline vòng trong (Agentic Self-Instruct)
 
-[← 09 Build plan](09-build-plan.md) · [Về README →](README.md)
+[← 09 Build plan](09-build-plan.md) · [Về README →](../README.md)
 
 > Vòng trong = sinh 1 mẫu data. Orchestrator là **code deterministic**; 4 subagent là LLM (API).
 > Lặp vòng này hàng nghìn lần để ra dataset.

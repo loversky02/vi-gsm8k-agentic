@@ -1,6 +1,6 @@
 # Pipeline vòng trong — Agentic Self-Instruct (toán tiếng Việt)
 
-Sinh dữ liệu instruction-tuning toán tiếng Việt theo sơ đồ ở [../10-pipeline-inner-loop.md](../10-pipeline-inner-loop.md).
+Sinh dữ liệu instruction-tuning toán tiếng Việt theo sơ đồ ở [../10-pipeline-inner-loop.md](../docs/10-pipeline-inner-loop.md).
 
 ## Cấu trúc
 

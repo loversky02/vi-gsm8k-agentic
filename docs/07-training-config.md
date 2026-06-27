@@ -1,6 +1,6 @@
 # 07 — Cấu hình Training & GPU (đã khuyến nghị)
 
-[← 06 Câu hỏi mở](06-open-questions.md) · [Về README →](README.md)
+[← 06 Câu hỏi mở](06-open-questions.md) · [Về README →](../README.md)
 
 > Chốt ngày 2026-06-26. Số liệu tổng hợp từ research, mang tính ước lượng — phụ thuộc framework & cách train.
 

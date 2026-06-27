@@ -1,6 +1,6 @@
 # 09 — Quyết định build & Kế hoạch MVP
 
-[← 08 Chi phí](08-cost-estimate.md) · [Về README →](README.md)
+[← 08 Chi phí](08-cost-estimate.md) · [Về README →](../README.md)
 
 > Chốt 2026-06-26. Hạ tầng: **2× H100**, ngân sách GPU **~1tr5** (~11h). Domain: **Toán**.
 

@@ -1,6 +1,6 @@
 # 08 — Ước tính chi phí (thuê GPU FPT AI Factory)
 
-[← 07 Training config](07-training-config.md) · [Về README →](README.md)
+[← 07 Training config](07-training-config.md) · [Về README →](../README.md)
 
 > Dựa trên bảng giá FPT AI Factory user chụp ngày 2026-06-26. Quy đổi ~26.000 VND/$ (kiểm lại tỉ giá khi tính thật).
 > Mọi con số là **ước lượng dải rộng** — phụ thuộc số mẫu, số vòng refine, số run thử nghiệm.

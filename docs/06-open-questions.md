@@ -1,6 +1,6 @@
 # 06 — Câu hỏi mở (cần chốt trước khi code)
 
-[← 05 Meta-optimizer](05-meta-optimizer.md) · [Về README →](README.md)
+[← 05 Meta-optimizer](05-meta-optimizer.md) · [Về README →](../README.md)
 
 > Danh sách quyết định đang treo. Chốt xong cái nào thì đánh dấu ✅ và ghi lựa chọn.
 

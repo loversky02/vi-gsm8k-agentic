@@ -1,6 +1,6 @@
 # 00 — Paper Autodata (tóm tắt)
 
-[← README](README.md) · Tiếp: [01 — Khả thi & scope →](01-feasibility-scope.md)
+[← README](../README.md) · Tiếp: [01 — Khả thi & scope →](01-feasibility-scope.md)
 
 ## Thông tin
 
