@@ -48,8 +48,19 @@ def main():
         append = True
         print(f"Resume: đã có {len(existing)} mẫu, cần sinh thêm {n_to_gen}")
 
-    kept, stats = generate(seeds, n_to_gen, use_judge=not a.no_judge, workers=a.workers,
-                           out_path=a.out, initial_seen=initial_seen, append=append, idx_offset=offset)
+    try:
+        kept, stats = generate(seeds, n_to_gen, use_judge=not a.no_judge, workers=a.workers,
+                               out_path=a.out, initial_seen=initial_seen, append=append, idx_offset=offset)
+    except Exception as e:
+        msg = str(e).lower()
+        done = sum(1 for _ in open(a.out, encoding="utf-8")) if os.path.exists(a.out) else 0
+        if any(k in msg for k in ("429", "rate", "limit", "quota", "exhaust", "insufficient")):
+            print(f"\n⚠️  CHẠM LIMIT — đã lưu {done}/{a.n} mẫu vào {a.out}")
+            print(f"→ Đổi tài khoản (sửa M_STRONG/M_VERIFIER hoặc .env) rồi chạy LẠI để resume:")
+            print(f"   python run.py --n {a.n} --resume --out {a.out} --seeds {a.seeds} --workers {a.workers}")
+            return
+        print(f"\n✖ Lỗi khác ({type(e).__name__}: {str(e)[:120]}) — đã lưu {done} mẫu, resume an toàn.")
+        raise
 
     total = offset + len(kept)
     print(f"Giữ thêm {len(kept)} (tổng {total}/{a.n})  ->  {a.out}")

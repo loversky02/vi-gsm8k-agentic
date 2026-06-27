@@ -70,18 +70,21 @@ Vietnamese problems.
 
 ## Results — does it beat translated data?
 
-Fine-tuned **Qwen3-4B-Instruct-2507** (LoRA SFT, 3 epochs) on this dataset vs a same-size
-machine-translated GSM8K baseline, evaluated on **200 held-out Vietnamese GSM8K-test** problems
-(answers verified by code):
+Fine-tuned **Qwen3-4B-Instruct-2507** (LoRA SFT, 3 epochs, **3 seeds**) on this dataset vs a
+same-size machine-translated GSM8K baseline. Evaluated on held-out Vietnamese **GSM8K-test
+(in-distribution, 200)** and a **SVAMP-derived out-of-distribution set (150)**, answers verified
+by code:
 
-| Model | Train data | Accuracy |
-|---|---|---|
-| Base | — (zero-shot) | 73.5% |
-| Baseline | machine-translated GSM8K | 76.5% |
-| **This dataset (agentic)** | agentic self-instruct | **81.0%** |
+| Model | Train data | In-dist | OOD |
+|---|---|---|---|
+| Base | — (zero-shot) | 75.0% | 88.0% |
+| Baseline | machine-translated GSM8K | 76.5% ±1.1 | 83.6% ±2.2 |
+| **This dataset (agentic)** | agentic self-instruct | **80.8% ±1.2** | **90.2% ±0.4** |
 
-→ Training on this agentic dataset beats translated data by **+4.5 points** (and base by +7.5).
-*Single-seed result; multi-seed + larger eval recommended for tighter statistical significance.*
+→ Beats translated data by **+4.3** in-dist and **+6.6** OOD (mean of 3 seeds). Notably the agentic
+model **beats the base model on OOD (90.2 vs 88.0)** while the translated baseline *drops below base
+(83.6)* — machine-translated data hurts out-of-distribution generalization; the agentic data
+preserves it.
 
 ## License
 

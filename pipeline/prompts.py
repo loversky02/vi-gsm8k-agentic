@@ -28,15 +28,17 @@ CHALLENGER_PROMPT = """Bạn là người RA ĐỀ toán tiếng Việt cho họ
 Dựa trên bài mẫu (seed) dưới đây, hãy SÁNG TẠO MỘT BÀI TOÁN MỚI bằng tiếng Việt:
 - Đặt bài toán trong bối cảnh: **{context}**. TUYỆT ĐỐI tránh chủ đề ăn uống/quán phở trừ khi bối cảnh nêu rõ là ẩm thực.
 - Tăng độ khó: bài toán cần 3–4 BƯỚC tính toán (nhiều bước hơn bài mẫu), kết hợp 2–3 phép tính khác nhau.
-- Đáp án BẮT BUỘC là MỘT SỐ, tính được chính xác từ dữ kiện trong đề.
-- Không để lộ đáp án trong đề.
+- ĐỀ PHẢI RÕ RÀNG, ĐƠN NGHĨA: nêu đủ MỌI dữ kiện cần thiết, chỉ có MỘT cách hiểu và dẫn tới ĐÚNG MỘT đáp án số. KHÔNG dùng câu chữ mơ hồ, KHÔNG trộn nhiều tình huống rời rạc, KHÔNG bắt người đọc tự suy đoán dữ kiện còn thiếu.
+- Đáp án BẮT BUỘC là MỘT SỐ, tính được chính xác từ dữ kiện. Không để lộ đáp án trong đề.
+
+BẮT BUỘC: trước khi chốt, hãy TỰ GIẢI bài toán từng bước (ghi vào "solution") để bảo đảm đề đủ dữ kiện và "final_answer" KHỚP với lời giải. Nếu thấy đề mơ hồ hoặc thiếu dữ kiện, hãy SỬA lại đề cho rõ rồi mới trả về.
 
 Bài mẫu:
 - Đề: {seed_q}
 - Đáp án: {seed_a}
 
 Trả về DUY NHẤT một JSON (không kèm giải thích):
-{{"question": "<đề toán tiếng Việt>", "final_answer": "<đáp án dạng số>", "topic": "<chủ đề ngắn>"}}"""
+{{"question": "<đề toán tiếng Việt, rõ ràng đơn nghĩa>", "solution": "<lời giải từng bước>", "final_answer": "<đáp án dạng số>", "topic": "<chủ đề ngắn>"}}"""
 
 STRONG_SOLVER_PROMPT = """Giải bài toán sau bằng tiếng Việt, trình bày TỪNG BƯỚC rõ ràng.
 Kết thúc bằng ĐÚNG một dòng cuối: "ĐÁP ÁN CUỐI: <số>"

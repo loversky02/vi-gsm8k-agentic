@@ -18,6 +18,7 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--model", default="Qwen/Qwen3-4B-Instruct-2507")
     ap.add_argument("--epochs", type=float, default=3)
+    ap.add_argument("--seed", type=int, default=42)
     a = ap.parse_args()
 
     tok = AutoTokenizer.from_pretrained(a.model)
@@ -39,7 +40,7 @@ def main():
         output_dir=a.out, num_train_epochs=a.epochs,
         per_device_train_batch_size=4, gradient_accumulation_steps=4,
         learning_rate=2e-4, bf16=True, logging_steps=10,
-        save_strategy="epoch", max_length=2048, warmup_ratio=0.03,
+        save_strategy="no", max_length=2048, warmup_ratio=0.03, seed=a.seed,
     )
     trainer = SFTTrainer(model=model, train_dataset=ds, peft_config=peft, args=cfg)
     trainer.train()

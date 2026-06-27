@@ -19,8 +19,8 @@ ROUTER_BASE = os.getenv("ROUTER_API_BASE", "https://9router-production-e72e.up.r
 
 # Vai trò -> cấu hình. api_base/api_key_env chỉ cần cho endpoint tuỳ biến (9router).
 ROLES = {
-    # Gemini direct (router OAuth bị Google chặn cho Gemini — cả ag/ lẫn gc/ đều 403)
-    "challenger": {"model": os.getenv("M_CHALLENGER", "gemini/gemini-2.5-flash"), "temperature": 1.0},
+    # Challenger = DeepSeek chat (Gemini đã cạn credit; deepseek-chat rẻ + cache 75% + tiếng Việt tốt)
+    "challenger": {"model": os.getenv("M_CHALLENGER", "deepseek/deepseek-chat"), "temperature": 1.0},
     "strong": {
         "model": os.getenv("M_STRONG", "openai/cx/gpt-5.5"),            # GPT-5.5 qua 9router
         "api_base": ROUTER_BASE,
